@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    /* Page Animation */
+    .page-circle {
+        opacity: 1;
+        visibility: visible;
+        width: 30px;
+        height: 30px;
+        border: 6px solid #fff;
+        border-bottom-color: transparent;
+        border-radius: 50%;
+        display: inline-block;
+        box-sizing: border-box;
+        animation: rotation 1s linear infinite, fade 300ms ease-in-out forwards;
+    }
+
+    body {
+      overflow: hidden;
+    }
+
+    @keyframes rotation {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .min-h-inherit {
+        min-height: inherit;
+      }
+
+      .background-gradient {
+        @apply bg-gradient-to-br from-black to-[#130612]
+      }
+
+      .truncate-ellipsis {
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%; 
+      }
+}
